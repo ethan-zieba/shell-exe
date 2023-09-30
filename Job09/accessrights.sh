@@ -10,12 +10,14 @@
 # Finally, I think having an automatically ran loop that executes a sha1sum or sha256sum to check
 # a files alteration or corruption could be a good option if solid safety was needed
 
-# Check if .csv file exists
+# Checks if .csv file exists
 if [ ! -f Shell_Userlist.csv ]; then
 	echo "Shell_Userlist.csv file doesn't exist"
 	exit 1
 fi
 
+# The way read -r is used, it will skip the last line during the while loop, so here we add a blank
+# line to the file
 echo "" >> Shell_Userlist.csv
 
 {
