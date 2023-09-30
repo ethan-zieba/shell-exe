@@ -3,6 +3,12 @@
 # Then execute sudo ls Shell_Userlist.csv | sudo entr -r ./accessright.sh in the working directory
 # This will check automatically if .csv file changes and execute ./accessright.sh if so
 
+# We could also use inotify package and create a loop in this script, which calls a function
+# Whenever the .csv file is altered
+# Inotify is really useful in terms of system administration and security
+
+# Finally, I think having an automatically ran loop that executes a sha1sum or sha256sum to check
+# a files alteration or corruption could be a good option if solid safety was needed
 
 # Check if .csv file exists
 if [ ! -f Shell_Userlist.csv ]; then
