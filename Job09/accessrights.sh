@@ -7,7 +7,7 @@
 # Whenever the .csv file is altered
 # Inotify is really useful in terms of system administration and security
 
-# Finally, I think having an automatically ran loop that executes a sha1sum or sha256sum to check
+# Finally, I think having an automatically ran loop as a daemon that executes a sha1sum or sha256sum to check
 # a files alteration or corruption could be a good option if solid safety was needed
 
 # Checks if .csv file exists
